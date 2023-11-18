@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    margin: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input, select {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* Add your existing CSS styles here */
+#itemGroupTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#itemGroupTable th, #itemGroupTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#itemGroupTable th {
+    background-color: #f2f2f2;
+}
+
+#itemGroupTable tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}

@@ -1,0 +1,257 @@
+.home-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .home-login-page {
+    width: 100%;
+    height: 1117px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .home-rectangle16 {
+    top: 161px;
+    left: 538px;
+    width: 652px;
+    height: 787px;
+    position: absolute;
+    border-radius: 25px;
+  }
+  .home-circle {
+    top: 927px;
+    left: 1164px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .home-ellipse2 {
+    top: -7px;
+    left: 0px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+  }
+  .home-ellipse1 {
+    top: 0px;
+    left: -7px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 3px;
+  }
+  .home-circle1 {
+    top: 178px;
+    left: 561px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .home-ellipse21 {
+    top: 7px;
+    left: 0px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+  }
+  .home-ellipse11 {
+    top: 0px;
+    left: 7px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 3px;
+  }
+  .home-text {
+    top: 209px;
+    left: 684px;
+    color: rgba(64, 62, 86, 1);
+    height: auto;
+    position: absolute;
+    font-size: 50px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .home-rectangle19 {
+    top: 396px;
+    left: 603px;
+    width: 521px;
+    height: 70px;
+    position: absolute;
+    border-color: rgba(64, 62, 86, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+  }
+  .home-rectangle23 {
+    top: 748px;
+    left: 605px;
+    width: 521px;
+    height: 70px;
+    position: absolute;
+    border-radius: 10px;
+  }
+  .home-rectangle21 {
+    top: 504px;
+    left: 603px;
+    width: 521px;
+    height: 70px;
+    position: absolute;
+    border-color: rgba(64, 62, 86, 1);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+  }
+  .home-text2 {
+    top: 412px;
+    left: 685px;
+    color: rgba(64, 62, 86, 1);
+    height: auto;
+    position: absolute;
+    font-size: 25px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .home-text4 {
+    top: 284px;
+    left: 778px;
+    color: rgba(64, 62, 86, 1);
+    height: auto;
+    position: absolute;
+    font-size: 15px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .home-ellipse3 {
+    top: 528px;
+    left: 685px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse4 {
+    top: 528px;
+    left: 714px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse5 {
+    top: 528px;
+    left: 743px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse6 {
+    top: 528px;
+    left: 772px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse7 {
+    top: 528px;
+    left: 801px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse8 {
+    top: 528px;
+    left: 830px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse9 {
+    top: 528px;
+    left: 859px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-ellipse10 {
+    top: 528px;
+    left: 888px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .home-text6 {
+    top: 759px;
+    left: 798px;
+    color: rgba(64, 62, 86, 1);
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    font-style: Bold;
+    text-align: left;
+    font-family: Lato;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .home-group {
+    top: 419px;
+    left: 641px;
+    width: 20px;
+    height: 25px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .home-vector {
+    top: 0px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  }
+  .home-vector1 {
+    top: 13.75px;
+    left: 0px;
+    width: 20px;
+    height: 11px;
+    position: absolute;
+  }
+  .home-vector2 {
+    top: 528px;
+    left: 643px;
+    width: 19px;
+    height: 25px;
+    position: absolute;
+  }
