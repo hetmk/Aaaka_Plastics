@@ -24,7 +24,10 @@
     &:placeholder-shown~.form__label {
       font-size: 1.1rem;
       cursor: text;
-      top: 40px;
+      top: 43%;
+      left: 3%;
+      color: black;
+     
     }
   }
 
@@ -57,7 +60,7 @@
   }
 
   .form__group.field {
-    margin-bottom: 20px;
+    margin-bottom: -17px;
   }
 
   .form__field,
@@ -161,3 +164,54 @@
     pointer-events: none;
     user-select: none;
   }
+
+
+ /* Larger screens */
+.form__group {
+  width: 50%;
+}
+
+.form__field,
+.select select {
+  width: 300px;
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 992px) {
+  .form__group {
+    width: 100%;
+  }
+
+  .form__field,
+  .select select {
+    width: 100%;
+  }
+
+  /* Additional styles for smaller screens */
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .form__field,
+  .select select {
+    width: 100%;
+  }
+
+  /* Stack inputs on smaller screens */
+  .item1 {
+    flex-direction: column;
+  }
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 480px) {
+  .form__field,
+  .select select {
+    width: 100%;
+  }
+
+  /* Stack inputs on very small screens */
+  .item1 {
+    flex-direction: column;
+  }
+}
