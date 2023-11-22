@@ -27,6 +27,100 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <link rel="stylesheet" href="../assets/css/addaccount.css">
+
+  <style>
+.form__field {
+  width: 86%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle 3D effect */
+}
+
+/* Style for select dropdowns */
+.select select {
+  width: 106%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle 3D effect */
+}
+
+.btn-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .btn {
+      margin-left: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-save {
+      background-color: #00a8ff; /* Adjust the color as needed */
+    }
+
+    .btn-cancel {
+      background-color: #e74c3c; /* Adjust the color as needed */
+    }
+
+
+
+    /* Larger screens */
+.form__field {
+  width: 86%;
+  /* ... other styles ... */
+}
+
+.select select {
+  width: 106%;
+  /* ... other styles ... */
+}
+
+/* Tablet styles */
+@media only screen and (max-width: 992px) {
+  .form__field, .select select {
+    width: 100%;
+    /* Adjust other styles as needed for smaller screens */
+  }
+
+  /* Additional styles for smaller screens */
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  .form__field, .select select {
+    width: 100%;
+    /* Further adjustments for smaller screens */
+  }
+
+  /* Additional styles for even smaller screens */
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 480px) {
+  .form__field, .select select {
+    width: 100%;
+    /* Additional adjustments for very small screens */
+  }
+
+  /* Additional styles for very small screens */
+}
+
+
+  </style>
 </head>
 
 <body>
@@ -39,190 +133,190 @@
         <div class="row">
           <!-- Left Column -->
           <div class="col">
-            <!-- <label for="name" style="margin-bottom: 10px; display: block;">Name:</label>
-                    <input style="width: calc(100% - 65px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="name" name="name"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-              <label for="name" class="form__label">Name</label>
-            </div>
-            <!-- <label for="print-name" style="margin-bottom: 10px; display: block;">Print Name:</label>
-                    <input style="width: calc(100% - 95px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="print-name" name="print-name"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Print Name" name="Print name" id='printName'
-                required />
-              <label for="Print name" class="form__label">Print Name:</label>
-            </div>
+            <h4 style="margin-top: 3%;">Genral information</h4>
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">First Name</label>
+                  </div>
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Last Name</label>
+                  </div>
 
-            <!-- <label for="opening-balance" style="margin-bottom: 10px; display: block;">Opening Balance:</label>
-                    <input style="width: calc(100% - 140px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="opening-balance" name="opening-balance"> -->
-            <div class="form__group field">
-              <input type="Opening Balance" class="form__field" placeholder="Opening Balance" name="Opening Balance"
-                id='openingBalance' required />
-              <label for="Opening Balance" class="form__label">Opening Balance:</label>
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Alias" name="Alias" id='Alias' />
+                    <label for="Alias" class="form__label">useraname</label>
+                  </div>
             </div>
 
-            <!-- <label for="prev-year-balance" style="margin-bottom: 10px; display: block;">Prev. Year Balance:</label>
-                    <input style="width: calc(100% - 160px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="prev-year-balance" name="prev-year-balance"> -->
-            <div class="form__group field">
-              <input type="Prev. Year Balance" class="form__field" placeholder="Prev. Year Balance"
-                name="Prev. Year Balance" id='prevYearBalance' required />
-              <label for="Prev. Year Balance" class="form__label">Prev. Year Balance</label>
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Billing Name</label>
+                  </div>
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Opening Balance</label>
+                  </div>
+
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Alias" name="Alias" id='Alias' />
+                    <label for="Alias" class="form__label">Closing balance</label>
+                  </div>
             </div>
 
-            <!-- <label for="address" style="margin-bottom: 10px; display: block;">Address:</label>
-                    <textarea style="width: calc(100% - 80px); height: 80px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="address" name="address"></textarea> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Address" name="Address" id='Address' required />
-              <label for="Address" class="form__label">Name</label>
-            </div>
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Group:</label> -->
+                    <label class="select" for="slct">
+                        <select id="groupCountry" required="required">
+                          <option value="" disabled="disabled" selected="selected">Select Group</option>
+                          <option value="India">Group 1</option>
+                          <option value="USA">Group 2</option>
+                          <option value="Canada">Group 3</option>
+          
+                        </select>
+                        <svg>
+                          <use xlink:href="#select-arrow-down"></use>
+                        </svg>
+                    </label>
+                  </div>
+                  <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Dr/Cr:</label> -->
 
-            <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Country:</label>
-            <!-- <select style="width: calc(100% - 80px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="country" name="country">
-                        <option value="India">India</option>
-                        <option value="usa">USA</option>
-                        <option value="canada">Canada</option>
-                    </select> -->
+                    <label class="select" for="dr-cr-1">
+                      <select id="drCrTwo" name="dr-cr-1" required="required">
+                        <option value="" disabled="disabled" selected="selected">DR/CR</option>
+                        <option value="dr">Dr</option>
+                        <option value="cr">Cr</option>
+                      </select>
+                      <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                      </svg>
+                    </label>
+                  </div>
 
-            <label class="select" for="slct">
-              <select id="slct" required="required">
-                <option value="" disabled="disabled" selected="selected">Select option</option>
-                <option value="India">India</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
+                  <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Dr/Cr:</label> -->
 
-              </select>
-              <svg>
-                <use xlink:href="#select-arrow-down"></use>
-              </svg>
-            </label>
-
-
-
-
-            <!-- <label for="email" style="margin-bottom: 10px; display: block;">Email:</label>
-                    <input style="width: calc(100% - 60px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="email" id="email" name="email"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Email" name="Email" id='Email' required />
-              <label for="Email" class="form__label">Email</label>
+                    <label class="select" for="dr-cr-1">
+                      <select id="drCrTwo" name="dr-cr-1" required="required">
+                        <option value="" disabled="disabled" selected="selected">DR/CR</option>
+                        <option value="dr">Dr</option>
+                        <option value="cr">Cr</option>
+                      </select>
+                      <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                      </svg>
+                    </label>
+                  </div>
             </div>
 
           </div>
+
           <!-- Right Column -->
+
           <div class="col">
-            <!-- <label for="alias" style="margin-bottom: 10px; display: block;">Alias (optional):</label>
-                    <input style="margin-left: 10px; width: calc(100% - 95px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="alias" name="alias"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Alias" name="Alias" id='Alias' />
-              <label for="Alias" class="form__label">Alias (optional):</label>
-            </div>
-            <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Group:</label>
+            <h4 style="margin-top: 3%;">Billing information</h4>
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Mobile No" name="Mobile No" id='mobileNo'
+                      required />
+                    <label for="Mobile No" class="form__label">Mobile No:</label>
+                  </div>
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Email" name="Email" id='Email' required />
+                    <label for="Email" class="form__label">Email</label>
+                  </div>
 
-            <!-- <select style="margin-left: 10px; width: calc(100% - 80px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="group" name="group">
-                        <option value="group1">Group 1</option>
-                        <option value="group2">Group 2</option>
-                    </select> -->
-            <label class="select" for="slct">
-              <select id="groupCountry" required="required">
-                <option value="" disabled="disabled" selected="selected">Group:</option>
-                <option value="India">Group 1</option>
-                <option value="USA">Group 2</option>
-                <option value="Canada">Group 3</option>
-
-              </select>
-              <svg>
-                <use xlink:href="#select-arrow-down"></use>
-              </svg>
-            </label>
-
-            <!-- <label for="dr-cr-1" style="margin-bottom: 10px; display: block;">Dr/Cr:</label>
-                    <select style="margin-left: 10px; width: calc(100% - 80px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="dr-cr-1" name="dr-cr-1">
-                        <option value="dr">Dr</option>
-                        <option value="cr">Cr</option>
-                    </select> -->
-            <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Dr/Cr:</label>
-
-            <label class="select" for="dr-cr-1">
-              <select id="drCrOne" name="dr-cr-1" required="required">
-                <option value="" disabled="disabled" selected="selected">Select option</option>
-                <option value="dr">Dr</option>
-                <option value="cr">Cr</option>
-              </select>
-              <svg>
-                <use xlink:href="#select-arrow-down"></use>
-              </svg>
-            </label>
-
-            <!-- <label for="dr-cr-2" style="margin-bottom: 10px; display: block;">Dr/Cr:</label>
-                    <select style="margin-left: 10px; width: calc(100% - 80px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="dr-cr-2" name="dr-cr-2">
-                        <option value="dr">Dr</option>
-                        <option value="cr">Cr</option>
-                    </select> -->
-            <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Dr/Cr:</label>
-
-            <label class="select" for="dr-cr-1">
-              <select id="drCrTwo" name="dr-cr-1" required="required">
-                <option value="" disabled="disabled" selected="selected">Select option</option>
-                <option value="dr">Dr</option>
-                <option value="cr">Cr</option>
-              </select>
-              <svg>
-                <use xlink:href="#select-arrow-down"></use>
-              </svg>
-            </label>
-
-            <!-- <label for="mobile-no" style="margin-bottom: 10px; display: block;">Mobile No:</label>
-                    <input style="margin-left: 10px; width: calc(100% - 110px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="mobile-no" name="mobile-no"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="Mobile No" name="Mobile No" id='mobileNo'
-                required />
-              <label for="Mobile No" class="form__label">Mobile No:</label>
+                  <div class="form__group field">
+                    <input type="" class="form__field" placeholder="Address" name="Address" id='Address' required />
+                    <!-- <textarea id="Address" class="form__field" name="Address"required></textarea> -->
+                    <label for="Address" class="form__label">Address</label>
+                  </div>
             </div>
 
-            <!-- <label for="state" style="margin-bottom: 10px; display: block;">State:</label>
-                    <select style="margin-left: 10px; width: calc(100% - 80px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" id="state" name="state">
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Country:</label> -->
+                    <label class="select" for="slct">
+                        <select id="slct" required="required">
+                          <option value="" disabled="disabled" selected="selected">Select Country</option>
+                          <option value="India">India</option>
+                          <option value="USA">USA</option>
+                          <option value="Canada">Canada</option>
+          
+                        </select>
+                        <svg>
+                          <use xlink:href="#select-arrow-down"></use>
+                        </svg>
+                      </label>
+                  </div>
+                  <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">State:</label> -->
+
+                    <label class="select" for="state">
+                      <select id="state" name="state" required="required">
+                        <option value="" disabled="disabled" selected="selected">Select State</option>
                         <option value="Gujrat">Gujrat</option>
-                        <option value="ny">New York</option>
-                        <option value="ca">California</option>
-                    </select> -->
-            <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">State:</label>
+                        <option value="ny">Rajasthan</option>
+                        <option value="ca">Naharastra</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                      <svg>
+                        <use xlink:href="#select-arrow-down"></use>
+                      </svg>
+                    </label>
+                  </div>
 
-            <label class="select" for="state">
-              <select id="state" name="state" required="required">
-                <option value="" disabled="disabled" selected="selected">Select option</option>
-                <option value="Gujrat">Gujrat</option>
-                <option value="ny">Rajasthan</option>
-                <option value="ca">Naharastra</option>
-                <!-- Add more options as needed -->
-              </select>
-              <svg>
-                <use xlink:href="#select-arrow-down"></use>
-              </svg>
-            </label>
+                  <div class="form__group field">
+                    <!-- <input type="input" class="form__field" placeholder="Alias" name="Alias" id='Alias' />
+                    <label for="Alias" class="form__label">Closing balance</label> -->
+                  </div>
+            </div>
 
-            <!-- <label for="gst-number" style="margin-bottom: 10px; display: block;">GST Number:</label>
-                    <input style="margin-left: 10px; width: calc(100% - 100px); height: 30px; border-radius: 15px; margin-bottom: 20px; padding: 5px; display: block;" type="text" id="gst-number" name="gst-number"> -->
-            <div class="form__group field">
-              <input type="input" class="form__field" placeholder="GST Number" name="GST Number" id='GSTNumber'
-                required />
-              <label for="GST Number" class="form__label">GST Number:</label>
+            <div class="item1" style="display: flex;">
+                <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Group:</label> -->
+                    <label class="select" for="slct">
+                        <select id="groupCountry" required="required">
+                          <option value="" disabled="disabled" selected="selected">Select</option>
+                          <option value="India">Group 1</option>
+                          <option value="USA">Group 2</option>
+                          <option value="Canada">Group 3</option>
+          
+                        </select>
+                        <svg>
+                          <use xlink:href="#select-arrow-down"></use>
+                        </svg>
+                    </label>
+                  </div>
+                  <div class="form__group field">
+                    <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Group:</label> -->
+
+                    <input type="input" class="form__field" placeholder="GST Number" name="GST Number" id='GSTNumber'
+                      required />
+                      <label for="GST Number" class="form__label">GST Number:</label>
+       
+                  </div>
+
+                  <div class="form__group field">
+
+                  </div>
             </div>
 
           </div>
+
+
         </div>
         <br>
       </div>
 
-      <input style="padding: 10px 15px;
-        font-size: 18px;
-        text-align: center;
-        cursor: pointer;
-        outline: none;
-        color: #fff;
-        background-color: #00A8FF;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 4px #999; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;"
-        id="addaccount" type="submit" value="Save">
+      <div class="btn-container">
+        <button class="btn btn-save" id="saveBtn">Save</button>
+        <button class="btn btn-cancel" id="cancelBtn">Cancel</button>
+      </div>
     </form>
   </div>
 
