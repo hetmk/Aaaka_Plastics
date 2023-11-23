@@ -1,167 +1,234 @@
 <!DOCTYPE html>
-<!-- Coding by CodingNepal | www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Aaaka Plastics</title>
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet"href="./assets/css/menu2.css">
-     <script src="./assets/js/locomotive-scroll.js"></script>
-   </head>
-<body>
-  <div class="sidebar">
-    <div class="profile-details">
-        <div class="profile-content">
-          <img src="./assets/images/user icon.png" alt="profileImg">
-        </div>
-        <div class="name-job">
-          <div class="job">Super User</div>
-          <div class="profile_name">Name</div>
-        </div>
-      </div>
-      <hr color="white">
-    <ul class="nav-links">
-      <li>
-        <a href="#about">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#about">Dashboard</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Account</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Account</a></li>
-          <li><a target="right" href="./pages/addaccount.html">Add</a></li>
-          <li><a target="right" href="./pages/accountmodify.html">Modify</a></li>
-          <li><a target="right" href="./pages/accountlist2.html">List</a></li>
-        </ul>
-      </li>
-    
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name"> Account Group</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Account Group</a></li>
-          <li><a target="right" href="./pages/addaccountgroup.html">Add</a></li>
-          <li><a target="right" href="./pages/accountgroupmodify.html">Modify</a></li>
-          <li> <a target="right" href="./pages/accountgrouplist.html">List</a></li>
-        </ul>
-      </li>
-    
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Item</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Item</a></li>
-          <li> <a target="right" href="./pages/additem.html">Add</a></li>
-          <li><a target="right" href="./pages/itemmodify.html">Modify</a></li>
-          <li> <a target="right" href="./pages/itemlist.html">List</a></li>
-        </ul>
-      </li>
-   
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Item Group</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Item Group</a></li>
-          <li> <a target="right" href="./pages/additemgroup.html">Add</a></li>
-          <li> <a target="right" href="./pages/itemgroupmodify.html">Modify</a></li>
-          <li> <a target="right" href="./pages/itemgrouplist.html">List</a></li>
-        </ul>
-      </li>
-      <hr color="white">
-    <li>
-        <a href="#">
-        <i class='bx bxs-user' ></i>
-        <span class="link_name dashboard">User 1</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">User 1</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#">
-        <i class='bx bxs-user' ></i>
-        <span class="link_name dashboard">User 2</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name dashboard" href="#">User 2</a></li>
-        </ul>
-    </li>
-    <li>
-        <a href="#">
-        <i class='bx bxs-user' ></i>
-        <span class="link_name dashboard">User 3</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name dashboard" href="#">User 3</a></li>
-        </ul>
-    </li>
-    <hr color="white">
-</ul>
-  </div>
-  <!-- <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
+<html lang="en">
 
-    </div>
-  </section> -->
-  <script>
-    let arrow = document.querySelectorAll(".arrow");
-    for (var i = 0; i < arrow.length; i++) {
-      arrow[i].addEventListener("click", (e) => {
-        let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
-        arrowParent.classList.toggle("showMenu");
-      });
-    }
-  
-    let sidebar = document.querySelector(".sidebar");
-    // let sidebarBtn = document.querySelector(".bx-menu");
-    // console.log(sidebarBtn);
-    // sidebarBtn.addEventListener("click", () => {
-    //   sidebar.classList.toggle("close");
-    // });
-  
-    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-    var dropdown = document.getElementsByClassName("iocn-link");
-    for (var i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block") {
-          dropdownContent.style.display = "none";
-        } else {
-          dropdownContent.style.display = "block";
-        }
-      });
-    }
-  </script>
-  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"href="./assets/css/menu2.css">
+
+    <title>Document</title>
+    <style>
+.drop,
+.drop1 {
+    position: relative;
+}
+
+.sub-menu {
+    position: relative;
+    top: 100%;
+    left: 0;
+    z-index: 1; 
+}
+
+.menu.active {
+    margin-bottom: 150px;
+}
+
+.user.active {
+    margin-top: 150px; 
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="side_container">
+
+        <!-- profile part started -->
+
+        <div class="profile">
+            <div class="info">
+                <div class="img">
+                    <img src="#" alt="user">
+                </div>
+                <div class="text">
+                    <div class="name">Het Kikani</div>
+                    <div class="pos">Sr. Manager</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- profile part ended -->
+
+
+        <!-- menu part started -->
+
+        <div class="menu">
+            <div class="mainbt">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-grid-alt' ></i>
+                        Dashboard
+                    </a>
+                </div>
+            </div>
+            <div class="drop">
+                <ul class="nav-links">
+                    <li>
+                        <div class="iocn-link">
+                            <a href="#">
+                                <i class='bx bxs-user'></i>
+                                <span class="link_name">Account</span>
+                            </a>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a target="right" href="./pages/addaccount.html"><i class='bx bxs-user-plus'></i>Add Account
+                                    </a></li>
+                            <li><a target="right" href="./pages/accountmodify.html"><i class='bx bxs-edit-alt' ></i>Modify Account</a></li>
+                            <li><a target="right" href="./pages/accountlist.html"><i class='bx bxs-user-detail' ></i>List
+                                    </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="drop1">
+                <ul class="nav-links">
+                    <li>
+                        <div class="iocn-link">
+                            <a href="#">
+                                <i class='bx bxs-group'></i>
+                                <span class="link_name">Account Group</span>
+                            </a>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add group
+                                    </a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                                    </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="drop1">
+                <ul class="nav-links">
+                    <li>
+                        <div class="iocn-link">
+                            <a href="#">
+                                <i class='bx bxs-shopping-bag-alt'></i>
+                                <span class="link_name">item</span>
+                            </a>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add Item
+                                    </a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Item</a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                                    </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="drop1">
+                <ul class="nav-links">
+                    <li>
+                        <div class="iocn-link">
+                            <a href="#">
+                                <i class='bx bxs-shopping-bags' ></i>
+                                <span class="link_name">Item Group</span>
+                            </a>
+                            <i class='bx bxs-chevron-down arrow'></i>
+                        </div>
+                        <ul class="sub-menu">
+                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add Group
+                                    </a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
+                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                                    </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- menu part ended -->
+
+        <!-- user part started -->
+
+        <div class="user">
+            <div class="hd">
+                <div class="txt">
+                    users
+                </div>
+                <div class="add">
+                    <i class='bx bx-plus-medical' ></i>
+                </div>
+            </div>
+            <div class="list">
+                <div class="uname_list">
+                    <div class="icon">
+                        <i class='bx bxs-user' ></i>
+                    </div>
+                    <div class="uname">
+                        M.S Dhoni
+                    </div>
+                </div>
+                <div class="uname_list">
+                    <div class="icon">
+                        <i class='bx bxs-user' ></i>
+                    </div>
+                    <div class="uname">
+                        Virat Kohli
+                    </div>
+                </div>
+                <div class="uname_list">
+                    <div class="icon">
+                        <i class='bx bxs-user' ></i>
+                    </div>
+                    <div class="uname">
+                        Rohit Sharma
+                    </div>
+                </div>
+                <div class="uname_list">
+                    <div class="icon">
+                        <i class='bx bxs-user' ></i>
+                    </div>
+                    <div class="uname">
+                        K.L Rahul
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- user part ended -->
+
+
+      
+<!-- Updated JavaScript code -->
+<!-- Updated JavaScript code -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuSection = document.querySelector('.menu');
+        var userSection = document.querySelector('.user');
+
+        // Add event listeners to dropdowns
+        var dropdowns = document.querySelectorAll('.drop, .drop1');
+        dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener('mouseenter', function () {
+                menuSection.classList.add('active');
+                userSection.classList.add('active');
+            });
+
+            dropdown.addEventListener('mouseleave', function () {
+                menuSection.classList.remove('active');
+                userSection.classList.remove('active');
+            });
+        });
+    });
+</script>
+
+
+
+        
+
 </body>
+
+</html>
+
 </html>
