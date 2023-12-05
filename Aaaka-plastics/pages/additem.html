@@ -10,12 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Aaaka Plastics</title>
 
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
@@ -23,13 +22,232 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../assets/css/additem.css">
 
+    <style>
+        .form__field {
+            width: 86%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Box shadow for a subtle 3D effect */
+        }
+
+        /* Style for select dropdowns */
+        .select select {
+            width: 106%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Box shadow for a subtle 3D effect */
+        }
+
+        .btn-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-left: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-save {
+            background-color: #00a8ff;
+            /* Adjust the color as needed */
+        }
+
+        .btn-cancel {
+            color: #00a8ff;
+            border-color: #00a8ff;
+            border: radius 5px solid;
+            /* Adjust the color as needed */
+        }
+
+
+
+        /* Larger screens */
+        .form__field {
+            width: 86%;
+            /* ... other styles ... */
+        }
+
+        .select select {
+            width: 106%;
+            /* ... other styles ... */
+        }
+
+        /* Tablet styles */
+        @media only screen and (max-width: 992px) {
+
+            .form__field,
+            .select select {
+                width: 100%;
+                /* Adjust other styles as needed for smaller screens */
+            }
+
+            /* Additional styles for smaller screens */
+        }
+
+        /* Mobile styles */
+        @media only screen and (max-width: 768px) {
+
+            .form__field,
+            .select select {
+                width: 100%;
+                /* Further adjustments for smaller screens */
+            }
+
+            /* Additional styles for even smaller screens */
+        }
+
+        /* Small mobile styles */
+        @media only screen and (max-width: 480px) {
+
+            .form__field,
+            .select select {
+                width: 100%;
+                /* Additional adjustments for very small screens */
+            }
+
+            /* Additional styles for very small screens */
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <h1 style="margin-left: 50px; margin-top: 50px; ">
         Add Item
-    </header>
+    </h1>
     <div class="container">
+        <form id="data-form">
+            <div class="section">
+                <div class="row">
+                    <!-- Left Column -->
+                    <div class="col">
+                        <h4 style="margin-top: 1%;">Genral information</h4>
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Name" name="groupName"
+                                    id='groupName' required />
+                                <label for="groupName" class="form__label">Name</label>
+                            </div>
+                            <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Alias (optional)" name="alias"
+                                    id='alias' />
+                                <label for="alias" class="form__label">Alias (optional)</label>
+                            </div>
+                        </div>
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Print Name" name="printName"
+                                    id='printName' />
+                                <label for="printName" class="form__label">Print Name:</label>
+                            </div>
+                            <div class="form__group field">
+                                <textarea class="form__field" placeholder="Item Description" name="itemDescription"
+                                    id='itemDescription'></textarea>
+                                <label for="itemDescription" class="form__label">Item Description</label>
+                            </div>
+                        </div>
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Group" name="Group" id='Group' />
+                                <label for="Group" class="form__label">Group:</label>
+                            </div>
+
+                        </div>
+                        <h4 style="margin-top: 4%;">Genral information</h4>
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Country:</label> -->
+                                <label class="select" for="slct">
+                                  <select style="background-color: #E6F2FF;" id="slct" required="required">
+                                    <option value="" disabled="disabled" selected="selected">Select Unit</option>
+                                    <option value="Unit1">Unit 1</option>
+                                    <option value="Unit2">Unit 2</option>
+                                    <option value="Unit3">Unit 3</option>
+                  
+                                  </select>
+                                 
+                                </label>
+                              </div>
+                              <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="Sales Price (Rs.)" name="salesPrice" id='salesPrice' />
+                                <label for="salesPrice" class="form__label">Sales Price</label>
+                            </div>
+                        </div>
+
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <input type="text" class="form__field" placeholder="Opening Quantity" name="openingQuantity" id='openingQuantity' />
+                                <label for="openingQuantity" class="form__label">Opening Quantity</label>
+                            </div>
+                            <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="Purchase Price (Rs.)" name="purchasePrice" id='purchasePrice' />
+                                <label for="purchasePrice" class="form__label">Purchase Price</label>
+                            </div>
+                        </div>
+
+
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="Opening Value (Rs.)" name="openingValue" id='openingValue' />
+                                <label for="openingValue" class="form__label">Opening Value</label>
+                            </div>
+                            <div class="form__group field">
+                                <input type="number" class="form__field" placeholder="M.R.P. (Rs.)" name="mrp" id='mrp' />
+                                <label for="mrp" class="form__label">M.R.P.</label>
+                            </div>
+                        </div>
+
+                        <div class="item1" style="display: flex;">
+                            <div class="form__group field">
+                                <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Country:</label> -->
+                                <label class="select" for="slct">
+                                    <select style="background-color: #E6F2FF;" id="unit" name="unit">
+                                        <option value="" disabled="disabled" selected="selected">Select Category</option>
+                                        <option value="unit1">Unit 1</option>
+                                        <option value="unit2">Unit 2</option>
+                                        <option value="unit3">Unit 3</option>
+                                    </select>
+                                 
+                                </label>
+                              </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container pl-5 ml-5 ">
+                <button class="btn btn-save" id="saveBtn">Add Account</button>
+                <button class="btn btn-cancel" id="cancelBtn">Reset</button>
+              </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="container">
         <form onsubmit="addItem(event)">
  
             <h6 class="mt-5" style="color: #00A8FF;">General Info.</h6>         
@@ -132,32 +350,22 @@
         </div>
     </div>
     
-            
-    
-        
-            
-        
-            
-            
-        
-            
-        
-            
-        
-    <input style="padding: 10px 15px;
-    font-size: 18px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #00A8FF;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px #999; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;" type="submit" value="Save">
-    
-        </form>
+             -->
+
+
+
+
+
+
+
+
+
+
+
+    </form>
     </div>
-    
+
     <script src="../assets/scripts/additem.js"></script>
 </body>
-</html>    
+
+</html>

@@ -2,26 +2,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #e6f2ff;
 }
-
 header {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
-
-section {
+.search-container {
+    text-align: center;
     margin: 20px;
+    
 }
 
-label {
-    margin-right: 10px;
+input {
+    padding: 10px;
+    font-size: 16px;
 }
 
-input, select {
-    margin-bottom: 10px;
-    padding: 5px;
+.table-container {
+    overflow-x: auto;
+    max-width: 80%;
+    margin: auto;
 }
 
 table {
@@ -31,32 +34,18 @@ table {
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #120f0f;
     padding: 8px;
     text-align: left;
 }
 
 th {
     background-color: #f2f2f2;
-}
-/* Add your existing CSS styles here */
-#itemTable {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
+    position: sticky;
+    top: 0;
 }
 
-#itemTable th, #itemTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-#itemTable th {
-    background-color: #f2f2f2;
-}
-
-#itemTable tr:hover {
-    background-color: #f5f5f5;
+td {
     cursor: pointer;
 }
+

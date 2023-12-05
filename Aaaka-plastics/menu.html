@@ -9,9 +9,21 @@
 
     <title>Document</title>
     <style>
+body
+{
+    background-color: #E6F2FF;
+    overflow-y: auto;
+    scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+  scroll-behavior: smooth;
+  
+  
+    
+}
 .drop,
 .drop1 {
     position: relative;
+   
 }
 
 .sub-menu {
@@ -33,7 +45,7 @@
     </style>
 </head>
 
-<body>
+<body data-spy="scroll" >
     <div class="side_container">
 
         <!-- profile part started -->
@@ -41,11 +53,11 @@
         <div class="profile">
             <div class="info">
                 <div class="img">
-                    <img src="#" alt="user">
+                    <img src="./assets/images/kenil.png" alt="user">
                 </div>
                 <div class="text">
-                    <div class="name">Het Kikani</div>
-                    <div class="pos">Sr. Manager</div>
+                    <div class="name">Kenil Gor</div>
+                    <div class="pos">Super User</div>
                 </div>
             </div>
         </div>
@@ -95,10 +107,10 @@
                             <i class='bx bxs-chevron-down arrow'></i>
                         </div>
                         <ul class="sub-menu">
-                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add group
+                            <li><a target="right" href="./pages/addaccountgroup.html"><i class='bx bxs-user-plus'></i>Add Group
                                     </a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                            <li><a target="right" href="./pages/accountgroupmodify.html"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
+                            <li><a target="right" href="./pages/accountgrouplist.html"><i class='bx bxs-user-detail' ></i>List
                                     </a></li>
                         </ul>
                     </li>
@@ -110,15 +122,15 @@
                         <div class="iocn-link">
                             <a href="#">
                                 <i class='bx bxs-shopping-bag-alt'></i>
-                                <span class="link_name">item</span>
+                                <span class="link_name">Item</span>
                             </a>
                             <i class='bx bxs-chevron-down arrow'></i>
                         </div>
                         <ul class="sub-menu">
-                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add Item
+                            <li><a target="right" href="./pages/additem.html"><i class='bx bxs-user-plus'></i>Add Item
                                     </a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Item</a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                            <li><a target="right" href="./pages/itemmodify.html"><i class='bx bxs-edit-alt' ></i>Modify Item</a></li>
+                            <li><a target="right" href="./pages/itemlist.html"><i class='bx bxs-user-detail' ></i>List
                                     </a></li>
                         </ul>
                     </li>
@@ -135,22 +147,22 @@
                             <i class='bx bxs-chevron-down arrow'></i>
                         </div>
                         <ul class="sub-menu">
-                            <li><a target="right" href="#"><i class='bx bxs-user-plus'></i>Add Group
+                            <li><a target="right" href="./pages/additemgroup.html"><i class='bx bxs-user-plus'></i>Add Group
                                     </a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
-                            <li><a target="right" href="#"><i class='bx bxs-user-detail' ></i>List
+                            <li><a target="right" href="./pages/itemgroupmodify.html"><i class='bx bxs-edit-alt' ></i>Modify Group</a></li>
+                            <li><a target="right" href="./pages/itemgrouplist.html"><i class='bx bxs-user-detail' ></i>List
                                     </a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> 
 
         <!-- menu part ended -->
 
         <!-- user part started -->
 
-        <div class="user">
+        <!-- <div class="user">
             <div class="hd">
                 <div class="txt">
                     users
@@ -193,7 +205,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <!-- user part ended -->

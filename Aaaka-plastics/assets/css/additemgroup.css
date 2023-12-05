@@ -11,7 +11,7 @@
   border: 0;
   border-bottom: 2px solid;
   outline: 0;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: 403E56;
   padding: 7px 0;
   background: transparent;
@@ -24,7 +24,10 @@
   &:placeholder-shown~.form__label {
     font-size: 1.1rem;
     cursor: text;
-    top: 40px;
+    top: 43%;
+    left: 3%;
+    color: black;
+   
   }
 }
 
@@ -57,7 +60,7 @@
 }
 
 .form__group.field {
-  margin-bottom: 20px;
+  margin-bottom: -17px;
 }
 
 .form__field,
@@ -163,40 +166,52 @@ header {
 }
 
 
-label, select {
-  margin: 10px;
-  padding: 8px;
+/* Larger screens */
+.form__group {
+width: 50%;
 }
 
-select {
-  width: 150px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  color: #333;
-}
-/* Add this CSS to your existing styles or CSS file */
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 27px;
+.form__field,
+.select select {
+width: 300px;
 }
 
-.buttons button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #00A8FF;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 4px #999;
-  transition: background-color 0.3s;
+/* Tablet styles */
+@media only screen and (max-width: 992px) {
+.form__group {
+  width: 100%;
 }
 
-.buttons button:hover {
-  background-color: #0077FF;
+.form__field,
+.select select {
+  width: 100%;
 }
 
-.hidden {
-  display: none;
+/* Additional styles for smaller screens */
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+.form__field,
+.select select {
+  width: 100%;
+}
+
+/* Stack inputs on smaller screens */
+.item1 {
+  flex-direction: column;
+}
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 480px) {
+.form__field,
+.select select {
+  width: 100%;
+}
+
+/* Stack inputs on very small screens */
+.item1 {
+  flex-direction: column;
+}
 }

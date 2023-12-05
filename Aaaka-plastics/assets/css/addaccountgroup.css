@@ -1,0 +1,128 @@
+body {
+    background-color: #E6F2FF;
+  }
+  
+  header {
+    background-color: #222222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col {
+    width: 48%;
+  }
+  
+  .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #403E56;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  
+  .form__field::placeholder {
+    color: transparent;
+  }
+  
+  .form__field:placeholder-shown~.form__label {
+    font-size: 1.1rem;
+    cursor: text;
+    top: 43%;
+    left: 3%;
+    color: black;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: gray;
+  }
+  
+  .form__field:focus {
+    ~.form__label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      font-size: 1rem;
+      color: #11998e;
+      font-weight: 700;
+    }
+  
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #403E56, #403E56);
+    border-image-slice: 1;
+  }
+  
+  .form__group.field {
+    margin-bottom: -17px;
+  }
+  
+  .form__field,
+  .select select {
+    padding: 15px;
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  .select svg {
+    top: calc(50% - 10px);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .buttons button:first-child {
+    background-color: #00a8ff;
+    color: #fff;
+  }
+  
+  .buttons button:last-child {
+    color: #00a8ff;
+    border: 1px solid #00a8ff;
+  }
+  

@@ -2,10 +2,7 @@ body{
   overflow-y: hidden;
 }
 .side_container {
-    width: 269px;
-    height: 903px;
-    margin-top: 64px;
-    margin-left: 64px;
+    margin-top: 20px;
 }
 
 .profile {

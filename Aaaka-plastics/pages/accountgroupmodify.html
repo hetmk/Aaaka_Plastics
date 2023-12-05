@@ -22,16 +22,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="./assets/js/locomotive-scroll.js"></script>
-    <link rel="stylesheet" href="../assets/css/itemgroupmodify.css">
+    <link rel="stylesheet" href="../assets/css/accpintgroupmodify.css">
     
 </head>
 <body>
-    <header>
-        <h1>Account Group Modification</h1>
-    </header>
+    <h1 style="margin-left: 50px; margin-top: 50px; " >
+        Account Group Modification
+    </h1>
 
     <section>
-        <label for="searchBar">Search Item Group:</label>
+        <label style="margin-left: 30px;" for="searchBar">Search Item Group:</label>
         <input type="text" id="searchBar" placeholder="Search" oninput="filterTable()">
     </section>
 
@@ -49,17 +49,17 @@
             <tr onclick="modifyItemGroup(this)">
                 <td>Group1</td>
                 <td>Y</td>
-                <td>UnderGroup1</td>
+                <td>-</td>
             </tr>
             <tr onclick="modifyItemGroup(this)">
                 <td>Group2</td>
                 <td>N</td>
-                <td>UnderGroup2</td>
+                <td>Group 1</td>
             </tr>
             <tr onclick="modifyItemGroup(this)">
                 <td>Group3</td>
                 <td>Y</td>
-                <td>UnderGroup3</td>
+                <td>-</td>
             </tr>
             <!-- Add more rows as needed -->
         </tbody>
