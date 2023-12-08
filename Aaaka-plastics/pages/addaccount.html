@@ -81,7 +81,7 @@ body{
     }
 
 
-
+    
     /* Larger screens */
 .form__field {
   width: 86%;
@@ -89,7 +89,7 @@ body{
 }
 
 .select select {
-  width: 106%;
+  width: 86%;
   /* ... other styles ... */
 }
 
@@ -138,7 +138,7 @@ body{
         <div class="row">
           <!-- Left Column -->
           <div class="col">
-            <h4 style="margin-top: 1%;">Genral information</h4>
+            <h4 style="margin-top: 1%;">General information</h4>
             <div class="item1" style="display: flex;">
                 <!-- <div class="form__group field">
                     <input type="input" class="form__field" placeholder="Name" name="First_name" id='First_name' required />
@@ -161,11 +161,11 @@ body{
             <div class="item1" style="display: flex;">
              
 
-              <div class="form__group field pt-4">
+              <div class="form__group field">
                 <input type="input" class="form__field" placeholder="Print Name" name="Print_Name" id='Print_Name' required />
                 <label for="Print_Name" class="form__label">Print Name</label>
               </div>
-              <label class="select pt-4" for="slct">
+              <label class="select form__group field" for="slct">
                 <select style="background-color: #E6F2FF;" id="groupCountry" required="required">
                   <option  value="" disabled="disabled" selected="selected">Select Group</option>
                   <option value="India">Group 1</option>
@@ -182,11 +182,11 @@ body{
           <div class="item1" style="display: flex;">
              
 
-            <div class="form__group field pt-4">
+            <div class="form__group field">
               <input type="input" class="form__field" placeholder="Name" name="Opening_Balance" id='Opening_Balance' required />
               <label for="Opening_Balance" class="form__label">Opening Balance</label>
             </div>
-            <label class="select pt-4" for="dr-cr-1">
+            <label class="select form__group field" for="dr-cr-1">
               <select style="background-color: #E6F2FF;" id="drCrTwo" name="dr-cr-1" required="required">
                 <option value="" disabled="disabled" selected="selected">DR/CR</option>
                 <option value="dr">Dr</option>
@@ -201,11 +201,11 @@ body{
         <div class="item1" style="display: flex;">
              
 
-          <div class="form__group field pt-4">
+          <div class="form__group field">
             <input  type="input" class="form__field" placeholder="Alias" name="Closing_balance" id='Closing_balance' />
             <label  for="Closing_balance" class="form__label">Closing balance</label>
           </div>
-          <label class="select pt-4 " for="dr-cr-1">
+          <label class="select form__group field" for="dr-cr-1">
             <select style="background-color: #E6F2FF;" id="drCrTwo" name="dr-cr-1" required="required">
               <option value="" disabled="disabled" selected="selected">DR/CR</option>
               <option value="dr">Dr</option>
@@ -214,20 +214,6 @@ body{
             
           </label>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
 
             
             </div>
@@ -250,15 +236,15 @@ body{
                   </div>
 
                   <div class="form__group field ">
-                    <textarea id="Address" class="form__field" name="Address"required>Address</textarea>
-                    <label for="Address" class="form__label"></label>
+                    <input id="Address" class="form__field" placeholder="Address" name="Address" id="Address" required>
+                    <label for="Address" class="form__label">Address</label>
                   </div>
             </div>
 
             <div class="item1" style="display: flex;">
                 <div class="form__group field">
                     <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Country:</label> -->
-                    <label class="select" for="slct">
+                    <label class="select" for="slct"  style="width: 100%;">
                         <select style="background-color: #E6F2FF;" id="slct" required="required">
                           <option value="" disabled="disabled" selected="selected">Select Country</option>
                           <option value="India">India</option>
@@ -274,7 +260,7 @@ body{
                   <div class="form__group field">
                     <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">State:</label> -->
 
-                    <label class="select" for="state">
+                    <label class="select" for="state"  style="width: 100%;">
                       <select style="background-color: #E6F2FF;" id="state" name="state" required="required">
                         <option value="" disabled="disabled" selected="selected">Select State</option>
                         <option value="Gujrat">Gujrat</option>
@@ -297,7 +283,7 @@ body{
             <div class="item1" style="display: flex;">
                 <div class="form__group field">
                     <!-- <label for="country" style="margin-bottom: 10px; display: block; color:#11998e;">Group:</label> -->
-                    <label class="select" for="slct">
+                    <label class="select" style="width: 100%;" for="slct">
                         <select style="background-color: #E6F2FF;" id="groupCountry" required="required">
                           <option value="" disabled="disabled" selected="selected">Gst Registered</option>
                           <option value="India">Group 1</option>
