@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = {
       name: document.getElementById('name').value,
       printName: document.getElementById('printName').value,
+      prtGroup:document.getElementById('prtGroup').value,
       openingBalance: document.getElementById('openingBalance').value,
       prevYearBalance: document.getElementById('prevYearBalance').value,
       address: document.getElementById('Address').value,
