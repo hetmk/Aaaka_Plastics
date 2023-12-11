@@ -24,6 +24,8 @@
     <script src="./assets/js/locomotive-scroll.js"></script>
     <!-- Add a link to a new CSS file for account modification, if needed -->
     <link rel="stylesheet" href="../assets/css/accountmodify.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
    
 </head>
@@ -39,33 +41,16 @@
     </section>
 
     <table id="accountTable">
-        <!-- Change the table headers -->
         <thead>
             <tr>
+                <th>Account Code</th>
                 <th>Account Name</th>
-                <th>Primary</th>
-                <th>Under Account</th>
             </tr>
         </thead>
-        <!-- Your table content -->
         <tbody>
-            <tr onclick="modifyAccount(this)">
-                <td>Account1</td>
-                <td>Y</td>
-                <td>-</td>
-            </tr>
-            <tr onclick="modifyAccount(this)">
-                <td>Account2</td>
-                <td>N</td>
-                <td>Account 1</td>
-            </tr>
-            <tr onclick="modifyAccount(this)">
-                <td>Account3</td>
-                <td>Y</td>
-                <td>-</td>
-            </tr>
-            <!-- Add more rows as needed -->
+            <!-- Account data will be loaded here -->
         </tbody>
+    </table>
     </table>
 
     <script src="../assets/scripts/accountModify.js"></script>

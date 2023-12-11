@@ -1,31 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    
-    // Function to save the form data to the server
-    function saveToServer(formData) {
-        axios.post('http://localhost:5500/addAccountGroup', formData)
-            .then(function (response) {
-                console.log('Group form data sent successfully:', response.data);
-                alert('Group added successfully!');
-                resetForm();
-            })
-            .catch(function (error) {
-                console.log('Error sending group form data:', error);
-                alert('Error adding group. Please try again.');
-            });
-    }
-
-    // Function to handle the save action
-    window.saveForm = function() {
-        const formData = {
-            groupName: document.getElementById('groupName').value,
-            alias: document.getElementById('alias').value,
-            primaryGroup: document.getElementById('primaryDropdown').value,
-            underGroup: document.getElementById('underGroupDropdown').value
-        };
-
-        saveToServer(formData);
-    };
+    document.getElementById('addGroupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        saveGroup();
+    });
 });
+
+function saveGroup() {
+    const groupName = document.getElementById('grpName').value;
+    const alias = document.getElementById('Alias').value;
+    const primaryGroup = document.getElementById('primaryDropdown').value;
+    const underGroup = document.getElementById('drCrTwo').value; // Update with correct ID
+
+    const formData = {
+        groupName,
+        alias,
+        primaryGroup,
+        underGroup
+    };
+
+    axios.post('http://localhost:5500/addAccountGroup', formData)
+        .then(response => {
+            console.log('Group added successfully:', response.data);
+            resetForm();
+        })
+        .catch(error => {
+            console.error('Error adding group:', error);
+        });
+}
+
 
 function toggleUnderGroupDropdown() {
     const primaryDropdown = document.getElementById('primaryDropdown');

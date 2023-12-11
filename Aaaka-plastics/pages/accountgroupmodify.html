@@ -35,36 +35,19 @@
         <input type="text" id="searchBar" placeholder="Search" oninput="filterTable()">
     </section>
 
-    <table id="itemGroupTable">
-        <!-- Your table headers -->
+    <table id="groupTable"> <!-- Make sure this ID matches the one used in your JavaScript -->
         <thead>
             <tr>
                 <th>Group Name</th>
                 <th>Primary</th>
-                <th>Under Group</th>
+                <!-- <th>Under Group</th> -->
             </tr>
         </thead>
-        <!-- Your table content -->
         <tbody>
-            <tr onclick="modifyItemGroup(this)">
-                <td>Group1</td>
-                <td>Y</td>
-                <td>-</td>
-            </tr>
-            <tr onclick="modifyItemGroup(this)">
-                <td>Group2</td>
-                <td>N</td>
-                <td>Group 1</td>
-            </tr>
-            <tr onclick="modifyItemGroup(this)">
-                <td>Group3</td>
-                <td>Y</td>
-                <td>-</td>
-            </tr>
-            <!-- Add more rows as needed -->
+            <!-- Account groups will be loaded here -->
         </tbody>
     </table>
-
+    
 
     <script src="../assets/scripts/accountGroupModify.js"></script>
 </body>

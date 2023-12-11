@@ -27,3 +27,22 @@ function modifyAccount(row) {
     alert('Modify account: ' + accountName + ', Primary: ' + isPrimary + ', Under Account: ' + underAccount);
     // Redirect or perform additional actions as needed
 }
+document.addEventListener('DOMContentLoaded', function() {
+    fetchAccounts();
+});
+
+function fetchAccounts() {
+    axios.get('http://localhost:5500/getAccountNames')
+        .then(response => {
+            console.log('Data:', response.data); // Log the data
+            const accounts = response.data;
+            const tableBody = document.querySelector('#accountTable tbody');
+            tableBody.innerHTML = '';
+            accounts.forEach(account => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = account.code;
+                row.insertCell(1).textContent = account.name;
+            });
+        })
+        .catch(error => console.error('Error:', error));
+}

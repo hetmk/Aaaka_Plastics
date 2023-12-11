@@ -1,7 +1,7 @@
     const { connect } = require('../scripts/db');
 
     function handleAddAccount(req, res) {
-        console.log(JSON.stringify(req.body, null, 2));
+        console.log(JSON.stringify(req.body, null, 2).trim());
 
         // Extract data for the Master table
         const name = req.body.name || '';
@@ -27,7 +27,7 @@
                 if (maxCodeResult.recordset[0].maxCode) {
                     newCode = maxCodeResult.recordset[0].maxCode + 1;
                 }
-
+                
                 request.input('name', name);
                 request.input('alias', alias);
                 request.input('printName', printName);
@@ -36,7 +36,7 @@
                 request.input('default', 0);
                 request.input('country',country);
                 request.input('newCode',newCode);
-
+                
                 // Insert data into the Master table
                 // const masterInsertQuery = `
                 //         INSERT INTO Aaaka_plastics.dbo.Master1  
@@ -72,20 +72,19 @@
                 const masterInsertQuery = `
                         INSERT INTO Aaaka_plastics.dbo.Master1  
                         (   Code,MasterType,
-                            Name, Alias, PrintName, ParentGrp
+                            Name, Alias, PrintName, ParentGrp, CreatedBy,ModifiedBy,CreationTime, ModificationTime
                         
                         ) 
                         OUTPUT INSERTED.Code
                         VALUES                  
                         (   @newCode,'2',
-                            @name, @alias, @printName, (SELECT Code FROM Aaaka_plastics.dbo.Master WHERE Name = @parentGrp)
+                            @name, @alias, @printName, (SELECT Code FROM Aaaka_plastics.dbo.Master1 WHERE Name = '${parentGrp}'),'Superuser','Superuser',@date,@date
                             
                         )
                     `;
 
                 const masterResult = await request.query(masterInsertQuery);
                 const insertedCode = masterResult.recordset[0].Code;
-
                 // Insert data into the MasterAddressInfo table
                 const addressInsertQuery = `
                     INSERT INTO Aaaka_plastics.dbo.MasterAddressInfo1
@@ -93,7 +92,7 @@
                         MasterCode,
                         Address1,
                         Address2,
-                        Address3,
+                        CountryCodeLong,
                         Email,
                         Mobile
                     ) 
@@ -102,7 +101,7 @@
                         '${insertedCode}',
                         '${address}',
                         '${state}',
-                        (SELECT Code FROM Aaaka_plastics.dbo.Master WHERE MasterType = 55 AND Name = @country),
+                        (SELECT Code FROM Aaaka_plastics.dbo.Master1 WHERE MasterType = 55 AND Name = '${country}'),
                         '${email}',
                         '${mobileNo}'
                     )

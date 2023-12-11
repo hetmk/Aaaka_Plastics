@@ -1,29 +1,37 @@
-function filterTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchBar");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("itemGroupTable");
-    tr = table.getElementsByTagName("tr");
+document.addEventListener('DOMContentLoaded', function() {
+    fetchAccountGroups();
+});
 
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+function fetchAccountGroups() {
+    axios.get('http://localhost:5500/getAccountGroupDetails')
+        .then(response => {
+            const groups = response.data;
+            const tableBody = document.querySelector('#groupTable tbody');
+            tableBody.innerHTML = '';
+            groups.forEach(group => {
+                const row = tableBody.insertRow();
+                row.insertCell(0).textContent = group.name;
+                row.insertCell(1).textContent = group.isPrimary;
+            });
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function filterTable() {
+    var input = document.getElementById("searchBar");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("groupTable");
+    var tr = table.getElementsByTagName("tr");
+
+    for (var i = 0; i < tr.length; i++) {
+        var td = tr[i].getElementsByTagName("td")[0];
         if (td) {
-            txtValue = td.textContent || td.innerText;
+            var txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 tr[i].style.display = "";
             } else {
                 tr[i].style.display = "none";
             }
-        }
+        }       
     }
-}
-
-function modifyItemGroup(row) {
-    var groupName = row.cells[0].innerText;
-    var isPrimary = row.cells[1].innerText;
-    var underGroup = row.cells[2].innerText;
-
-    // Perform modification logic for the selected item group (groupName, isPrimary, underGroup)
-    alert('Modify item group: ' + groupName + ', Primary: ' + isPrimary + ', Under Group: ' + underGroup);
-    // Redirect or perform additional actions as needed
 }

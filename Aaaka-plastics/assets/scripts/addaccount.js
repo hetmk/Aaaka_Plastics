@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     axios.post('http://localhost:5500/addAccount', formData)
       .then(function (response) {
         console.log('Form data sent successfully:', response.data);
+        resetForm();
         // Add any additional code here to handle the successful form submission, such as displaying a success message to the user.
       })
       .catch(function (error) {
@@ -37,3 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
+function resetForm() {
+  document.getElementById('data-form').reset();
+}

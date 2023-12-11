@@ -5,6 +5,7 @@ const db = require('../scripts/db');
 const loginRoute = require('../routes/login');
 const accountRoute = require('../routes/account');
 const itemRoute = require('../routes/item');
+const accountGroupRoute=require('../routes/accountGroup');
 
 
 
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Connect to the SQL Server
 db.connect
   .then(() => {
-    app.use('/', loginRoute,accountRoute,itemRoute);
+    app.use('/', loginRoute,accountRoute,itemRoute,accountGroupRoute);
 
     // Start the Express server after connecting to the database
     app.listen(5500, () => {

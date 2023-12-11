@@ -136,7 +136,7 @@
   </style>
 </head>
 <body>
-<form>
+<form id="addGroupForm"> 
   <h1 style="margin-left: 50px; margin-top: 50px; ">
     Add Account group
   </h1>
@@ -151,7 +151,7 @@
 
 
           <div class="form__group field">
-            <input type="input" class="form__field" placeholder="Group_Name" name="alias" id='alias' required />
+            <input type="input" class="form__field" placeholder="Group_Name" name="alias" id='grpName' required />
             <label for="Group_Name" class="form__label">Group Name:</label>
           </div>
           <div class="form__group field">
@@ -177,10 +177,10 @@
 
 
               <label class="select pt-4" for="dr-cr-1">
-                <select style="background-color: #E6F2FF;" id="drCrTwo" name="dr-cr-1" required="required">
+                <select style="background-color: #E6F2FF;" id="drCrTwo" required="required">
                   <option value="" disabled="disabled" selected="selected">Under Group:</option>
-                  <option value="dr">Group 1</option>
-                  <option value="cr">Group 2</option>
+                  <option value="Group 1">Group 1</option>
+                  <option value="Group 2">Group 2</option>
                 </select>
 
               </label>
@@ -194,8 +194,8 @@
       </div>
     </div>
     <div class="btn-container pt-5 pl-5">
-      <button class="btn btn-save" id="saveBtn">Add Account</button>
-      <button class="btn btn-cancel" id="cancelBtn">Reset</button>
+      <button class="btn btn-save" id="submit" onclick="saveGroup(event)">Add Account</button>
+      <button class="btn btn-cancel" id="cancelBtn" onclick="resetForm()">Reset</button>
     </div>
   </div>
 </form>
